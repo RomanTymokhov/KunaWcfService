@@ -9,7 +9,695 @@
 //------------------------------------------------------------------------------
 
 namespace TestApp.KunaService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TickerLine", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData")]
+    [System.SerializableAttribute()]
+    public partial class TickerLine : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int atField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.Ticker tickerField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int at {
+            get {
+                return this.atField;
+            }
+            set {
+                if ((this.atField.Equals(value) != true)) {
+                    this.atField = value;
+                    this.RaisePropertyChanged("at");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.Ticker ticker {
+            get {
+                return this.tickerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tickerField, value) != true)) {
+                    this.tickerField = value;
+                    this.RaisePropertyChanged("ticker");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Ticker", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData")]
+    [System.SerializableAttribute()]
+    public partial class Ticker : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal buyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal highField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal lastField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal lowField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal sellField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal volField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((this.amountField.Equals(value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal buy {
+            get {
+                return this.buyField;
+            }
+            set {
+                if ((this.buyField.Equals(value) != true)) {
+                    this.buyField = value;
+                    this.RaisePropertyChanged("buy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal high {
+            get {
+                return this.highField;
+            }
+            set {
+                if ((this.highField.Equals(value) != true)) {
+                    this.highField = value;
+                    this.RaisePropertyChanged("high");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal last {
+            get {
+                return this.lastField;
+            }
+            set {
+                if ((this.lastField.Equals(value) != true)) {
+                    this.lastField = value;
+                    this.RaisePropertyChanged("last");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal low {
+            get {
+                return this.lowField;
+            }
+            set {
+                if ((this.lowField.Equals(value) != true)) {
+                    this.lowField = value;
+                    this.RaisePropertyChanged("low");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal sell {
+            get {
+                return this.sellField;
+            }
+            set {
+                if ((this.sellField.Equals(value) != true)) {
+                    this.sellField = value;
+                    this.RaisePropertyChanged("sell");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal vol {
+            get {
+                return this.volField;
+            }
+            set {
+                if ((this.volField.Equals(value) != true)) {
+                    this.volField = value;
+                    this.RaisePropertyChanged("vol");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderBook", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData")]
+    [System.SerializableAttribute()]
+    public partial class OrderBook : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.Order[] asksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.Order[] bidsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.Order[] asks {
+            get {
+                return this.asksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.asksField, value) != true)) {
+                    this.asksField = value;
+                    this.RaisePropertyChanged("asks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.Order[] bids {
+            get {
+                return this.bidsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bidsField, value) != true)) {
+                    this.bidsField = value;
+                    this.RaisePropertyChanged("bids");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Order", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData")]
+    [System.SerializableAttribute()]
+    public partial class Order : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal avg_priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime createdAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal executedVolumeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.MarketPair marketPairField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private uint orderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.OrderState orderStateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.OrderType orderTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal remainingVolumeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.OrderSide sideField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private uint tradesCountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal volumeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal avg_price {
+            get {
+                return this.avg_priceField;
+            }
+            set {
+                if ((this.avg_priceField.Equals(value) != true)) {
+                    this.avg_priceField = value;
+                    this.RaisePropertyChanged("avg_price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime createdAt {
+            get {
+                return this.createdAtField;
+            }
+            set {
+                if ((this.createdAtField.Equals(value) != true)) {
+                    this.createdAtField = value;
+                    this.RaisePropertyChanged("createdAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal executedVolume {
+            get {
+                return this.executedVolumeField;
+            }
+            set {
+                if ((this.executedVolumeField.Equals(value) != true)) {
+                    this.executedVolumeField = value;
+                    this.RaisePropertyChanged("executedVolume");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.MarketPair marketPair {
+            get {
+                return this.marketPairField;
+            }
+            set {
+                if ((this.marketPairField.Equals(value) != true)) {
+                    this.marketPairField = value;
+                    this.RaisePropertyChanged("marketPair");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public uint orderId {
+            get {
+                return this.orderIdField;
+            }
+            set {
+                if ((this.orderIdField.Equals(value) != true)) {
+                    this.orderIdField = value;
+                    this.RaisePropertyChanged("orderId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.OrderState orderState {
+            get {
+                return this.orderStateField;
+            }
+            set {
+                if ((this.orderStateField.Equals(value) != true)) {
+                    this.orderStateField = value;
+                    this.RaisePropertyChanged("orderState");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.OrderType orderType {
+            get {
+                return this.orderTypeField;
+            }
+            set {
+                if ((this.orderTypeField.Equals(value) != true)) {
+                    this.orderTypeField = value;
+                    this.RaisePropertyChanged("orderType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal price {
+            get {
+                return this.priceField;
+            }
+            set {
+                if ((this.priceField.Equals(value) != true)) {
+                    this.priceField = value;
+                    this.RaisePropertyChanged("price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal remainingVolume {
+            get {
+                return this.remainingVolumeField;
+            }
+            set {
+                if ((this.remainingVolumeField.Equals(value) != true)) {
+                    this.remainingVolumeField = value;
+                    this.RaisePropertyChanged("remainingVolume");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.OrderSide side {
+            get {
+                return this.sideField;
+            }
+            set {
+                if ((this.sideField.Equals(value) != true)) {
+                    this.sideField = value;
+                    this.RaisePropertyChanged("side");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public uint tradesCount {
+            get {
+                return this.tradesCountField;
+            }
+            set {
+                if ((this.tradesCountField.Equals(value) != true)) {
+                    this.tradesCountField = value;
+                    this.RaisePropertyChanged("tradesCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal volume {
+            get {
+                return this.volumeField;
+            }
+            set {
+                if ((this.volumeField.Equals(value) != true)) {
+                    this.volumeField = value;
+                    this.RaisePropertyChanged("volume");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MarketPair", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
+    public enum MarketPair : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        btcuah = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ethuah = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        bchuah = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        wavesuah = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        xrpuah = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        gbguah = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        golgbg = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        kunbtc = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        bchbtc = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        rmcbtc = 9,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        rbtc = 10,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        arnbtc = 11,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        evrbtc = 12,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        b2bbtc = 13,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderState", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
+    public enum OrderState : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        wait = 0,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderType", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
+    public enum OrderType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        limit = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        market = 1,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderSide", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
+    public enum OrderSide : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        buy = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        sell = 1,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Trade", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData")]
+    [System.SerializableAttribute()]
+    public partial class Trade : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime createdAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal fundsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestApp.KunaService.MarketPair marketPairField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private uint tradeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal volumeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime createdAt {
+            get {
+                return this.createdAtField;
+            }
+            set {
+                if ((this.createdAtField.Equals(value) != true)) {
+                    this.createdAtField = value;
+                    this.RaisePropertyChanged("createdAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal funds {
+            get {
+                return this.fundsField;
+            }
+            set {
+                if ((this.fundsField.Equals(value) != true)) {
+                    this.fundsField = value;
+                    this.RaisePropertyChanged("funds");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestApp.KunaService.MarketPair marketPair {
+            get {
+                return this.marketPairField;
+            }
+            set {
+                if ((this.marketPairField.Equals(value) != true)) {
+                    this.marketPairField = value;
+                    this.RaisePropertyChanged("marketPair");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal price {
+            get {
+                return this.priceField;
+            }
+            set {
+                if ((this.priceField.Equals(value) != true)) {
+                    this.priceField = value;
+                    this.RaisePropertyChanged("price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public uint tradeId {
+            get {
+                return this.tradeIdField;
+            }
+            set {
+                if ((this.tradeIdField.Equals(value) != true)) {
+                    this.tradeIdField = value;
+                    this.RaisePropertyChanged("tradeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal volume {
+            get {
+                return this.volumeField;
+            }
+            set {
+                if ((this.volumeField.Equals(value) != true)) {
+                    this.volumeField = value;
+                    this.RaisePropertyChanged("volume");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KunaService.IKunaServise")]
@@ -22,22 +710,22 @@ namespace TestApp.KunaService {
         System.Threading.Tasks.Task<string> GetTimestampAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTickerline", ReplyAction="http://tempuri.org/IKunaServise/GetTickerlineResponse")]
-        string GetTickerline(string marketPair);
+        TestApp.KunaService.TickerLine GetTickerline(string marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTickerline", ReplyAction="http://tempuri.org/IKunaServise/GetTickerlineResponse")]
-        System.Threading.Tasks.Task<string> GetTickerlineAsync(string marketPair);
+        System.Threading.Tasks.Task<TestApp.KunaService.TickerLine> GetTickerlineAsync(string marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetOrderBook", ReplyAction="http://tempuri.org/IKunaServise/GetOrderBookResponse")]
-        string GetOrderBook(string marketPair);
+        TestApp.KunaService.OrderBook GetOrderBook(string marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetOrderBook", ReplyAction="http://tempuri.org/IKunaServise/GetOrderBookResponse")]
-        System.Threading.Tasks.Task<string> GetOrderBookAsync(string marketPair);
+        System.Threading.Tasks.Task<TestApp.KunaService.OrderBook> GetOrderBookAsync(string marketPair);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTrades", ReplyAction="http://tempuri.org/IKunaServise/GetTradesResponse")]
-        string GetTrades(string marketPair);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTrade", ReplyAction="http://tempuri.org/IKunaServise/GetTradeResponse")]
+        TestApp.KunaService.Trade[] GetTrade(string marketPair);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTrades", ReplyAction="http://tempuri.org/IKunaServise/GetTradesResponse")]
-        System.Threading.Tasks.Task<string> GetTradesAsync(string marketPair);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTrade", ReplyAction="http://tempuri.org/IKunaServise/GetTradeResponse")]
+        System.Threading.Tasks.Task<TestApp.KunaService.Trade[]> GetTradeAsync(string marketPair);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -75,28 +763,28 @@ namespace TestApp.KunaService {
             return base.Channel.GetTimestampAsync();
         }
         
-        public string GetTickerline(string marketPair) {
+        public TestApp.KunaService.TickerLine GetTickerline(string marketPair) {
             return base.Channel.GetTickerline(marketPair);
         }
         
-        public System.Threading.Tasks.Task<string> GetTickerlineAsync(string marketPair) {
+        public System.Threading.Tasks.Task<TestApp.KunaService.TickerLine> GetTickerlineAsync(string marketPair) {
             return base.Channel.GetTickerlineAsync(marketPair);
         }
         
-        public string GetOrderBook(string marketPair) {
+        public TestApp.KunaService.OrderBook GetOrderBook(string marketPair) {
             return base.Channel.GetOrderBook(marketPair);
         }
         
-        public System.Threading.Tasks.Task<string> GetOrderBookAsync(string marketPair) {
+        public System.Threading.Tasks.Task<TestApp.KunaService.OrderBook> GetOrderBookAsync(string marketPair) {
             return base.Channel.GetOrderBookAsync(marketPair);
         }
         
-        public string GetTrades(string marketPair) {
-            return base.Channel.GetTrades(marketPair);
+        public TestApp.KunaService.Trade[] GetTrade(string marketPair) {
+            return base.Channel.GetTrade(marketPair);
         }
         
-        public System.Threading.Tasks.Task<string> GetTradesAsync(string marketPair) {
-            return base.Channel.GetTradesAsync(marketPair);
+        public System.Threading.Tasks.Task<TestApp.KunaService.Trade[]> GetTradeAsync(string marketPair) {
+            return base.Channel.GetTradeAsync(marketPair);
         }
     }
 }

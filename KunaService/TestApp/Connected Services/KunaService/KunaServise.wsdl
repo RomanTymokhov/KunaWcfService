@@ -27,6 +27,7 @@
   </wsp:Policy>
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" />
       <xs:element name="GetTimestamp">
         <xs:complexType>
           <xs:sequence />
@@ -49,7 +50,7 @@
       <xs:element name="GetTickerlineResponse">
         <xs:complexType>
           <xs:sequence>
-            <xs:element minOccurs="0" name="GetTickerlineResult" nillable="true" type="xs:string" />
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" minOccurs="0" name="GetTickerlineResult" nillable="true" type="q1:TickerLine" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -63,21 +64,21 @@
       <xs:element name="GetOrderBookResponse">
         <xs:complexType>
           <xs:sequence>
-            <xs:element minOccurs="0" name="GetOrderBookResult" nillable="true" type="xs:string" />
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" minOccurs="0" name="GetOrderBookResult" nillable="true" type="q2:OrderBook" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="GetTrades">
+      <xs:element name="GetTrade">
         <xs:complexType>
           <xs:sequence>
             <xs:element minOccurs="0" name="marketPair" nillable="true" type="xs:string" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="GetTradesResponse">
+      <xs:element name="GetTradeResponse">
         <xs:complexType>
           <xs:sequence>
-            <xs:element minOccurs="0" name="GetTradesResult" nillable="true" type="xs:string" />
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" minOccurs="0" name="GetTradeResult" nillable="true" type="q3:ArrayOfTrade" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -123,6 +124,116 @@
       <xs:attribute name="Id" type="xs:ID" />
       <xs:attribute name="Ref" type="xs:IDREF" />
     </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" />
+      <xs:complexType name="TickerLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="at" type="xs:int" />
+          <xs:element minOccurs="0" name="ticker" nillable="true" type="tns:Ticker" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TickerLine" nillable="true" type="tns:TickerLine" />
+      <xs:complexType name="Ticker">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="buy" type="xs:decimal" />
+          <xs:element minOccurs="0" name="high" type="xs:decimal" />
+          <xs:element minOccurs="0" name="last" type="xs:decimal" />
+          <xs:element minOccurs="0" name="low" type="xs:decimal" />
+          <xs:element minOccurs="0" name="sell" type="xs:decimal" />
+          <xs:element minOccurs="0" name="vol" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Ticker" nillable="true" type="tns:Ticker" />
+      <xs:complexType name="OrderBook">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="asks" nillable="true" type="tns:ArrayOfOrder" />
+          <xs:element minOccurs="0" name="bids" nillable="true" type="tns:ArrayOfOrder" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="OrderBook" nillable="true" type="tns:OrderBook" />
+      <xs:complexType name="ArrayOfOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfOrder" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:complexType name="Order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="avg_price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="createdAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="executedVolume" type="xs:decimal" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="marketPair" type="q1:MarketPair" />
+          <xs:element minOccurs="0" name="orderId" type="xs:unsignedInt" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="orderState" type="q2:OrderState" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="orderType" type="q3:OrderType" />
+          <xs:element minOccurs="0" name="price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="remainingVolume" type="xs:decimal" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="side" type="q4:OrderSide" />
+          <xs:element minOccurs="0" name="tradesCount" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="volume" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Order" nillable="true" type="tns:Order" />
+      <xs:complexType name="ArrayOfTrade">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Trade" nillable="true" type="tns:Trade" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTrade" nillable="true" type="tns:ArrayOfTrade" />
+      <xs:complexType name="Trade">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createdAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="funds" type="xs:decimal" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="marketPair" type="q5:MarketPair" />
+          <xs:element minOccurs="0" name="price" type="xs:decimal" />
+          <xs:element minOccurs="0" name="tradeId" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="volume" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Trade" nillable="true" type="tns:Trade" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="MarketPair">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="btcuah" />
+          <xs:enumeration value="ethuah" />
+          <xs:enumeration value="bchuah" />
+          <xs:enumeration value="wavesuah" />
+          <xs:enumeration value="xrpuah" />
+          <xs:enumeration value="gbguah" />
+          <xs:enumeration value="golgbg" />
+          <xs:enumeration value="kunbtc" />
+          <xs:enumeration value="bchbtc" />
+          <xs:enumeration value="rmcbtc" />
+          <xs:enumeration value="rbtc" />
+          <xs:enumeration value="arnbtc" />
+          <xs:enumeration value="evrbtc" />
+          <xs:enumeration value="b2bbtc" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="MarketPair" nillable="true" type="tns:MarketPair" />
+      <xs:simpleType name="OrderState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="wait" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="OrderState" nillable="true" type="tns:OrderState" />
+      <xs:simpleType name="OrderType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="limit" />
+          <xs:enumeration value="market" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="OrderType" nillable="true" type="tns:OrderType" />
+      <xs:simpleType name="OrderSide">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="buy" />
+          <xs:enumeration value="sell" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="OrderSide" nillable="true" type="tns:OrderSide" />
+    </xs:schema>
   </wsdl:types>
   <wsdl:message name="IKunaServise_GetTimestamp_InputMessage">
     <wsdl:part name="parameters" element="tns:GetTimestamp" />
@@ -142,11 +253,11 @@
   <wsdl:message name="IKunaServise_GetOrderBook_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetOrderBookResponse" />
   </wsdl:message>
-  <wsdl:message name="IKunaServise_GetTrades_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetTrades" />
+  <wsdl:message name="IKunaServise_GetTrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrade" />
   </wsdl:message>
-  <wsdl:message name="IKunaServise_GetTrades_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetTradesResponse" />
+  <wsdl:message name="IKunaServise_GetTrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeResponse" />
   </wsdl:message>
   <wsdl:portType name="IKunaServise">
     <wsdl:operation name="GetTimestamp">
@@ -161,9 +272,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetOrderBook" message="tns:IKunaServise_GetOrderBook_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetOrderBookResponse" message="tns:IKunaServise_GetOrderBook_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTrades">
-      <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetTrades" message="tns:IKunaServise_GetTrades_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetTradesResponse" message="tns:IKunaServise_GetTrades_OutputMessage" />
+    <wsdl:operation name="GetTrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetTrade" message="tns:IKunaServise_GetTrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetTradeResponse" message="tns:IKunaServise_GetTrade_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IKunaServise" type="tns:IKunaServise">
@@ -195,8 +306,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetTrades">
-      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTrades" style="document" />
+    <wsdl:operation name="GetTrade">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTrade" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -235,8 +346,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetTrades">
-      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTrades" style="document" />
+    <wsdl:operation name="GetTrade">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTrade" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

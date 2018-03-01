@@ -55,6 +55,15 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Connected Services\KunaService\KunaServise.wsdl" />
+    <None Include="Connected Services\KunaService\TestApp.KunaService.OrderBook.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KunaService\TestApp.KunaService.TickerLine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KunaService\TestApp.KunaService.Trade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
