@@ -13,6 +13,8 @@ namespace CunaWrapper.DataLevel.ServiceData
         {
             MarketPair pair = new MarketPair();
 
+            if (enumStr == MarketPair.rbtc.ToString()) pair = MarketPair.rbtc;
+            if (enumStr == MarketPair.xrpuah.ToString()) pair = MarketPair.xrpuah;
             if (enumStr == MarketPair.arnbtc.ToString()) pair = MarketPair.arnbtc;
             if (enumStr == MarketPair.bchbtc.ToString()) pair = MarketPair.bchbtc;
             if (enumStr == MarketPair.btcuah.ToString()) pair = MarketPair.btcuah;
@@ -21,7 +23,6 @@ namespace CunaWrapper.DataLevel.ServiceData
             if (enumStr == MarketPair.gbguah.ToString()) pair = MarketPair.gbguah;
             if (enumStr == MarketPair.golgbg.ToString()) pair = MarketPair.golgbg;
             if (enumStr == MarketPair.kunbtc.ToString()) pair = MarketPair.kunbtc;
-            if (enumStr == MarketPair.rbtc.ToString()) pair = MarketPair.rbtc;
             if (enumStr == MarketPair.rmcbtc.ToString()) pair = MarketPair.rmcbtc;
             if (enumStr == MarketPair.wavesuah.ToString()) pair = MarketPair.wavesuah;
 
