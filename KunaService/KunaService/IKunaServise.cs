@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CunaWrapper.DataLevel.RciveData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -15,12 +16,12 @@ namespace KunaService
         string GetTimestamp();
 
         [OperationContract]
-        string GetTickerline(string marketPair);
+        TickerLine GetTickerline(string marketPair);
 
         [OperationContract]
-        string GetOrderBook(string marketPair);
+        OrderBook GetOrderBook(string marketPair);
 
         [OperationContract]
-        string GetTrades(string marketPair);
+        List<Trade> GetTrade(string marketPair);
     }
 }

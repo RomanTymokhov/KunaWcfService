@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestApp.ServiceReference2;
+using TestApp.KunaService;
 
 namespace TestApp
 {
@@ -13,7 +13,13 @@ namespace TestApp
         {
             KunaServiseClient kunaServise = new KunaServiseClient();
 
-            Console.WriteLine(kunaServise.GetTimestamp());
+            Console.WriteLine(kunaServise.GetTimestampAsync().Result);
+            Console.WriteLine("TickerLine:");
+            Console.WriteLine(kunaServise.GetTickerlineAsync("xrpuah").Result);
+            Console.WriteLine("OrderBook:");
+            Console.WriteLine(kunaServise.GetOrderBookAsync("bchuah").Result);
+            Console.WriteLine("Trades:");
+            Console.WriteLine(kunaServise.GetTradesAsync("wavesuah").Result);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CunaWrapper;
+using CunaWrapper.DataLevel.RciveData;
 using CunaWrapper.DataLevel.ServiceData;
 using System;
 using System.Collections.Generic;
@@ -22,19 +23,19 @@ namespace KunaService
             return cunaClient.GetTimestamp().Result.ToString();
         }
 
-        public string GetTickerline(string marketPair)
+        public TickerLine GetTickerline(string marketPair)
         {
-            return cunaClient.GetTickerLine(CunaLogic.EnumConvert(marketPair)).Result.ToString();
+            return cunaClient.GetTickerLine(CunaLogic.EnumConvert(marketPair)).Result;
         }
 
-        public string GetOrderBook(string marketPair)
+        public OrderBook GetOrderBook(string marketPair)
         {
-            return cunaClient.GetOrderBook(CunaLogic.EnumConvert(marketPair)).Result.ToString();
+            return cunaClient.GetOrderBook(CunaLogic.EnumConvert(marketPair)).Result;
         }
 
-        public string GetTrades(string marketPair)
+        public List<Trade> GetTrade(string marketPair)
         {
-            return cunaClient.GetTrades(CunaLogic.EnumConvert(marketPair)).Result.ToString();
+            return cunaClient.GetTrades(CunaLogic.EnumConvert(marketPair)).Result;
         }
     }
 }

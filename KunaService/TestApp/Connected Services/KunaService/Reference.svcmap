@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1270f024-b927-4420-9ae1-5c4a1d433413" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1145370c-1e43-44eb-900b-0d645ee9d473" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="https://kunaservice.azurewebsites.net/KunaServise.svc?singleWsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="KunaServise.wsdl" MetadataType="Wsdl" ID="e03f2c79-04dc-46dc-9571-800b6548e4cf" SourceId="1" SourceUrl="https://kunaservice.azurewebsites.net/KunaServise.svc?singleWsdl" />
+    <MetadataFile FileName="KunaServise.wsdl" MetadataType="Wsdl" ID="2863379f-7dff-4fee-9e2f-3a4d190cbf7f" SourceId="1" SourceUrl="https://kunaservice.azurewebsites.net/KunaServise.svc?singleWsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

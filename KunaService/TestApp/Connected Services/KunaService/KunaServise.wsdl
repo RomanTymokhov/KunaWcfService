@@ -39,6 +39,48 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="GetTickerline">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="marketPair" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTickerlineResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetTickerlineResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOrderBook">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="marketPair" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetOrderBookResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetOrderBookResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTrades">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="marketPair" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTradesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetTradesResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:schema>
     <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="anyType" nillable="true" type="xs:anyType" />
@@ -88,10 +130,40 @@
   <wsdl:message name="IKunaServise_GetTimestamp_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTimestampResponse" />
   </wsdl:message>
+  <wsdl:message name="IKunaServise_GetTickerline_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTickerline" />
+  </wsdl:message>
+  <wsdl:message name="IKunaServise_GetTickerline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTickerlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKunaServise_GetOrderBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBook" />
+  </wsdl:message>
+  <wsdl:message name="IKunaServise_GetOrderBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKunaServise_GetTrades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrades" />
+  </wsdl:message>
+  <wsdl:message name="IKunaServise_GetTrades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IKunaServise">
     <wsdl:operation name="GetTimestamp">
       <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetTimestamp" message="tns:IKunaServise_GetTimestamp_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetTimestampResponse" message="tns:IKunaServise_GetTimestamp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTickerline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetTickerline" message="tns:IKunaServise_GetTickerline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetTickerlineResponse" message="tns:IKunaServise_GetTickerline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetOrderBook" message="tns:IKunaServise_GetOrderBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetOrderBookResponse" message="tns:IKunaServise_GetOrderBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKunaServise/GetTrades" message="tns:IKunaServise_GetTrades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKunaServise/GetTradesResponse" message="tns:IKunaServise_GetTrades_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IKunaServise" type="tns:IKunaServise">
@@ -105,12 +177,66 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetTickerline">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTickerline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBook">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetOrderBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrades">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTrades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="BasicHttpsBinding_IKunaServise" type="tns:IKunaServise">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IKunaServise_policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetTimestamp">
       <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTimestamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTickerline">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTickerline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderBook">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetOrderBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrades">
+      <soap:operation soapAction="http://tempuri.org/IKunaServise/GetTrades" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
