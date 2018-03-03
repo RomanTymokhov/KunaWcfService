@@ -15,6 +15,7 @@ namespace CunaWrapper.DataLevel.ServiceData
 
             if (enumStr == MarketPair.rbtc.ToString()) pair = MarketPair.rbtc;
             if (enumStr == MarketPair.xrpuah.ToString()) pair = MarketPair.xrpuah;
+            if (enumStr == MarketPair.bchuah.ToString()) pair = MarketPair.bchuah;
             if (enumStr == MarketPair.arnbtc.ToString()) pair = MarketPair.arnbtc;
             if (enumStr == MarketPair.bchbtc.ToString()) pair = MarketPair.bchbtc;
             if (enumStr == MarketPair.btcuah.ToString()) pair = MarketPair.btcuah;

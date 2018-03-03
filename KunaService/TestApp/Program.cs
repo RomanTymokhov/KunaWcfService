@@ -15,9 +15,9 @@ namespace TestApp
 
             Console.WriteLine(kunaServise.GetTimestampAsync().Result);
             Console.WriteLine("TickerLine:");
-            Console.WriteLine(kunaServise.GetTickerlineAsync("xrpuah").Result.ticker.buy);
+            Console.WriteLine(kunaServise.GetTickerlineAsync("bchuah").Result.ticker.buy);
             Console.WriteLine("OrderBook:");
-            foreach (var item in kunaServise.GetOrderBookAsync("bchuah").Result.bids)
+            foreach (var item in kunaServise.GetOrderBookAsync("xrpuah").Result.bids)
             {
                 Console.WriteLine("orderId: " + item.orderId + " -- " + " order price " + item.price);
             }
