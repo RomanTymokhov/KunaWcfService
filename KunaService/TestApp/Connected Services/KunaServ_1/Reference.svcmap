@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9bffc2ef-a7cf-45e2-9faa-d48313ffb6fb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51450/KunaServise.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KunaServise.xsd" MetadataType="Schema" ID="9061446b-cb8c-4ca1-8893-01ed77cb0dcf" SourceId="1" SourceUrl="http://localhost:51450/KunaServise.svc?xsd=xsd0" />
+    <MetadataFile FileName="KunaServise1.xsd" MetadataType="Schema" ID="5e30d867-4680-45c6-aedc-88477cabae38" SourceId="1" SourceUrl="http://localhost:51450/KunaServise.svc?xsd=xsd2" />
+    <MetadataFile FileName="KunaServise2.xsd" MetadataType="Schema" ID="8e2241d4-e4ed-4a65-958e-32459a85febc" SourceId="1" SourceUrl="http://localhost:51450/KunaServise.svc?xsd=xsd3" />
+    <MetadataFile FileName="KunaServise.wsdl" MetadataType="Wsdl" ID="cc99e079-e3dc-456d-be6b-e64fde80b752" SourceId="1" SourceUrl="http://localhost:51450/KunaServise.svc?wsdl" />
+    <MetadataFile FileName="KunaServise.disco" MetadataType="Disco" ID="a864c232-7382-4640-a92d-df963ed12d1d" SourceId="1" SourceUrl="http://localhost:51450/KunaServise.svc?disco" />
+    <MetadataFile FileName="KunaServise3.xsd" MetadataType="Schema" ID="a3990dbc-3f91-4ae6-9341-14b8b9f86ff7" SourceId="1" SourceUrl="http://localhost:51450/KunaServise.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

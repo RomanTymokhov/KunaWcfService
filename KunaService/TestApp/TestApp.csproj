@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\KunaService\Reference.cs">
+    <Compile Include="Connected Services\KunaServ_1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -54,14 +54,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\KunaService\KunaServise.wsdl" />
-    <None Include="Connected Services\KunaService\TestApp.KunaService.OrderBook.datasource">
+    <None Include="Connected Services\KunaServ_1\KunaServise.wsdl" />
+    <None Include="Connected Services\KunaServ_1\KunaServise.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KunaServ_1\KunaServise1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KunaServ_1\KunaServise2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KunaServ_1\KunaServise3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KunaServ_1\TestApp.KunaServ_1.OrderBook.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\KunaService\TestApp.KunaService.TickerLine.datasource">
+    <None Include="Connected Services\KunaServ_1\TestApp.KunaServ_1.TickerLine.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\KunaService\TestApp.KunaService.Trade.datasource">
+    <None Include="Connected Services\KunaServ_1\TestApp.KunaServ_1.Trade.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
@@ -69,16 +81,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\KunaService\" />
+    <WCFMetadataStorage Include="Connected Services\KunaServ_1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\KunaService\configuration91.svcinfo" />
+    <None Include="Connected Services\KunaServ_1\KunaServise.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\KunaService\configuration.svcinfo" />
+    <None Include="Connected Services\KunaServ_1\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\KunaService\Reference.svcmap">
+    <None Include="Connected Services\KunaServ_1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KunaServ_1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

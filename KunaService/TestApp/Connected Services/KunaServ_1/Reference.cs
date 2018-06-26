@@ -8,10 +8,60 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestApp.KunaService {
+namespace TestApp.KunaServ_1 {
     using System.Runtime.Serialization;
     using System;
     
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MarketPair", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
+    public enum MarketPair : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        btcuah = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ethuah = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        xrpuah = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        ltcuah = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        zecuah = 4,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        dashuah = 5,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        bchuah = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        xlmuah = 7,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        eosuah = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        wavesuah = 9,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        tusduah = 10,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        gbguah = 11,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        golgbg = 12,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        kunbtc = 13,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        bchbtc = 14,
+    }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -26,7 +76,7 @@ namespace TestApp.KunaService {
         private int atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.Ticker tickerField;
+        private TestApp.KunaServ_1.Ticker tickerField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -52,7 +102,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.Ticker ticker {
+        public TestApp.KunaServ_1.Ticker ticker {
             get {
                 return this.tickerField;
             }
@@ -225,10 +275,10 @@ namespace TestApp.KunaService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.Order[] asksField;
+        private TestApp.KunaServ_1.Order[] asksField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.Order[] bidsField;
+        private TestApp.KunaServ_1.Order[] bidsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -241,7 +291,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.Order[] asks {
+        public TestApp.KunaServ_1.Order[] asks {
             get {
                 return this.asksField;
             }
@@ -254,7 +304,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.Order[] bids {
+        public TestApp.KunaServ_1.Order[] bids {
             get {
                 return this.bidsField;
             }
@@ -295,16 +345,16 @@ namespace TestApp.KunaService {
         private decimal executedVolumeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.MarketPair marketPairField;
+        private TestApp.KunaServ_1.MarketPair marketPairField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private uint orderIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.OrderState orderStateField;
+        private TestApp.KunaServ_1.OrderState orderStateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.OrderType orderTypeField;
+        private TestApp.KunaServ_1.OrderType orderTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal priceField;
@@ -313,7 +363,7 @@ namespace TestApp.KunaService {
         private decimal remainingVolumeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.OrderSide sideField;
+        private TestApp.KunaServ_1.OrderSide sideField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private uint tradesCountField;
@@ -371,7 +421,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.MarketPair marketPair {
+        public TestApp.KunaServ_1.MarketPair marketPair {
             get {
                 return this.marketPairField;
             }
@@ -397,7 +447,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.OrderState orderState {
+        public TestApp.KunaServ_1.OrderState orderState {
             get {
                 return this.orderStateField;
             }
@@ -410,7 +460,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.OrderType orderType {
+        public TestApp.KunaServ_1.OrderType orderType {
             get {
                 return this.orderTypeField;
             }
@@ -449,7 +499,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.OrderSide side {
+        public TestApp.KunaServ_1.OrderSide side {
             get {
                 return this.sideField;
             }
@@ -498,53 +548,6 @@ namespace TestApp.KunaService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MarketPair", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
-    public enum MarketPair : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        btcuah = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        ethuah = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        bchuah = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        wavesuah = 3,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        xrpuah = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        gbguah = 5,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        golgbg = 6,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        kunbtc = 7,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        bchbtc = 8,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        rmcbtc = 9,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        rbtc = 10,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        arnbtc = 11,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        evrbtc = 12,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        b2bbtc = 13,
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OrderState", Namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums")]
     public enum OrderState : int {
         
@@ -590,7 +593,7 @@ namespace TestApp.KunaService {
         private decimal fundsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestApp.KunaService.MarketPair marketPairField;
+        private TestApp.KunaServ_1.MarketPair marketPairField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal priceField;
@@ -638,7 +641,7 @@ namespace TestApp.KunaService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestApp.KunaService.MarketPair marketPair {
+        public TestApp.KunaServ_1.MarketPair marketPair {
             get {
                 return this.marketPairField;
             }
@@ -700,7 +703,7 @@ namespace TestApp.KunaService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KunaService.IKunaServise")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KunaServ_1.IKunaServise")]
     public interface IKunaServise {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTimestamp", ReplyAction="http://tempuri.org/IKunaServise/GetTimestampResponse")]
@@ -710,31 +713,31 @@ namespace TestApp.KunaService {
         System.Threading.Tasks.Task<string> GetTimestampAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTickerline", ReplyAction="http://tempuri.org/IKunaServise/GetTickerlineResponse")]
-        TestApp.KunaService.TickerLine GetTickerline(string marketPair);
+        TestApp.KunaServ_1.TickerLine GetTickerline(TestApp.KunaServ_1.MarketPair marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTickerline", ReplyAction="http://tempuri.org/IKunaServise/GetTickerlineResponse")]
-        System.Threading.Tasks.Task<TestApp.KunaService.TickerLine> GetTickerlineAsync(string marketPair);
+        System.Threading.Tasks.Task<TestApp.KunaServ_1.TickerLine> GetTickerlineAsync(TestApp.KunaServ_1.MarketPair marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetOrderBook", ReplyAction="http://tempuri.org/IKunaServise/GetOrderBookResponse")]
-        TestApp.KunaService.OrderBook GetOrderBook(string marketPair);
+        TestApp.KunaServ_1.OrderBook GetOrderBook(TestApp.KunaServ_1.MarketPair marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetOrderBook", ReplyAction="http://tempuri.org/IKunaServise/GetOrderBookResponse")]
-        System.Threading.Tasks.Task<TestApp.KunaService.OrderBook> GetOrderBookAsync(string marketPair);
+        System.Threading.Tasks.Task<TestApp.KunaServ_1.OrderBook> GetOrderBookAsync(TestApp.KunaServ_1.MarketPair marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTrade", ReplyAction="http://tempuri.org/IKunaServise/GetTradeResponse")]
-        TestApp.KunaService.Trade[] GetTrade(string marketPair);
+        TestApp.KunaServ_1.Trade[] GetTrade(TestApp.KunaServ_1.MarketPair marketPair);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKunaServise/GetTrade", ReplyAction="http://tempuri.org/IKunaServise/GetTradeResponse")]
-        System.Threading.Tasks.Task<TestApp.KunaService.Trade[]> GetTradeAsync(string marketPair);
+        System.Threading.Tasks.Task<TestApp.KunaServ_1.Trade[]> GetTradeAsync(TestApp.KunaServ_1.MarketPair marketPair);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IKunaServiseChannel : TestApp.KunaService.IKunaServise, System.ServiceModel.IClientChannel {
+    public interface IKunaServiseChannel : TestApp.KunaServ_1.IKunaServise, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class KunaServiseClient : System.ServiceModel.ClientBase<TestApp.KunaService.IKunaServise>, TestApp.KunaService.IKunaServise {
+    public partial class KunaServiseClient : System.ServiceModel.ClientBase<TestApp.KunaServ_1.IKunaServise>, TestApp.KunaServ_1.IKunaServise {
         
         public KunaServiseClient() {
         }
@@ -763,27 +766,27 @@ namespace TestApp.KunaService {
             return base.Channel.GetTimestampAsync();
         }
         
-        public TestApp.KunaService.TickerLine GetTickerline(string marketPair) {
+        public TestApp.KunaServ_1.TickerLine GetTickerline(TestApp.KunaServ_1.MarketPair marketPair) {
             return base.Channel.GetTickerline(marketPair);
         }
         
-        public System.Threading.Tasks.Task<TestApp.KunaService.TickerLine> GetTickerlineAsync(string marketPair) {
+        public System.Threading.Tasks.Task<TestApp.KunaServ_1.TickerLine> GetTickerlineAsync(TestApp.KunaServ_1.MarketPair marketPair) {
             return base.Channel.GetTickerlineAsync(marketPair);
         }
         
-        public TestApp.KunaService.OrderBook GetOrderBook(string marketPair) {
+        public TestApp.KunaServ_1.OrderBook GetOrderBook(TestApp.KunaServ_1.MarketPair marketPair) {
             return base.Channel.GetOrderBook(marketPair);
         }
         
-        public System.Threading.Tasks.Task<TestApp.KunaService.OrderBook> GetOrderBookAsync(string marketPair) {
+        public System.Threading.Tasks.Task<TestApp.KunaServ_1.OrderBook> GetOrderBookAsync(TestApp.KunaServ_1.MarketPair marketPair) {
             return base.Channel.GetOrderBookAsync(marketPair);
         }
         
-        public TestApp.KunaService.Trade[] GetTrade(string marketPair) {
+        public TestApp.KunaServ_1.Trade[] GetTrade(TestApp.KunaServ_1.MarketPair marketPair) {
             return base.Channel.GetTrade(marketPair);
         }
         
-        public System.Threading.Tasks.Task<TestApp.KunaService.Trade[]> GetTradeAsync(string marketPair) {
+        public System.Threading.Tasks.Task<TestApp.KunaServ_1.Trade[]> GetTradeAsync(TestApp.KunaServ_1.MarketPair marketPair) {
             return base.Channel.GetTradeAsync(marketPair);
         }
     }

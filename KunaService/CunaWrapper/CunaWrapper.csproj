@@ -51,7 +51,6 @@
     <Compile Include="DataLevel\RciveData\OrderBook.cs" />
     <Compile Include="DataLevel\RciveData\TickerLine.cs" />
     <Compile Include="DataLevel\RciveData\Trade.cs" />
-    <Compile Include="DataLevel\ServiceData\CunaLogic.cs" />
     <Compile Include="DataLevel\ServiceData\UrlParam.cs" />
     <Compile Include="DataLevel\ServiceData\UrlSegment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

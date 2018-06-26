@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:51450/KunaServise.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" />
+  <xs:import schemaLocation="http://localhost:51450/KunaServise.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" />
+  <xs:element name="GetTimestamp">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimestampResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTimestampResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTickerline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="marketPair" type="q1:MarketPair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTickerlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" minOccurs="0" name="GetTickerlineResult" nillable="true" type="q2:TickerLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="marketPair" type="q3:MarketPair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" minOccurs="0" name="GetOrderBookResult" nillable="true" type="q4:OrderBook" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" minOccurs="0" name="marketPair" type="q5:MarketPair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.RciveData" minOccurs="0" name="GetTradeResult" nillable="true" type="q6:ArrayOfTrade" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

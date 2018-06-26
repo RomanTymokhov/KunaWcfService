@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CunaWrapper.DataLevel.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="MarketPair">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="btcuah" />
+      <xs:enumeration value="ethuah" />
+      <xs:enumeration value="xrpuah" />
+      <xs:enumeration value="ltcuah" />
+      <xs:enumeration value="zecuah" />
+      <xs:enumeration value="dashuah" />
+      <xs:enumeration value="bchuah" />
+      <xs:enumeration value="xlmuah" />
+      <xs:enumeration value="eosuah" />
+      <xs:enumeration value="wavesuah" />
+      <xs:enumeration value="tusduah" />
+      <xs:enumeration value="gbguah" />
+      <xs:enumeration value="golgbg" />
+      <xs:enumeration value="kunbtc" />
+      <xs:enumeration value="bchbtc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MarketPair" nillable="true" type="tns:MarketPair" />
+  <xs:simpleType name="OrderState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="wait" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderState" nillable="true" type="tns:OrderState" />
+  <xs:simpleType name="OrderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="limit" />
+      <xs:enumeration value="market" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderType" nillable="true" type="tns:OrderType" />
+  <xs:simpleType name="OrderSide">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="buy" />
+      <xs:enumeration value="sell" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderSide" nillable="true" type="tns:OrderSide" />
+</xs:schema>
