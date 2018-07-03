@@ -15,7 +15,12 @@ namespace KunaService
     // ПРИМЕЧАНИЕ. Чтобы запустить клиент проверки WCF для тестирования службы, выберите элементы KunaServise.svc или KunaServise.svc.cs в обозревателе решений и начните отладку.
     public class KunaServise : IKunaServise
     {
-        CunaClient cunaClient = new CunaClient();
+        CunaClient cunaClient;
+
+        public KunaServise(Credentials credentials)
+        {
+            cunaClient = new CunaClient(credentials);
+        }
 
         //public relizations Kuna
 
