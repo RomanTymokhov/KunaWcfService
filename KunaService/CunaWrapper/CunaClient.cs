@@ -26,15 +26,26 @@ namespace CunaWrapper
         private const string baseUrl = "https://kuna.io";
         private const string baseSegment = "/api/v2";
 
+        public CunaClient()
+        {
+            IniInitialization();
+        }
+
         public CunaClient(Credentials credentials)
         {
             publicKey = credentials.PublicKey;
             secretKey = credentials.SecretKey;
 
+            IniInitialization();
+        }
+
+        private void IniInitialization()
+        {
             httpClient = new HttpClient();
             urlSegment = new UrlSegment();
             urlParam = new UrlParam();
         }
+            
 
         protected async Task<T> GetJsonAsync<T>(string requestUri)
         {
