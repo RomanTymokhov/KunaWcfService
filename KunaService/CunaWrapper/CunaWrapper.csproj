@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,7 @@
     <Compile Include="DataLevel\RciveData\OrderBook.cs" />
     <Compile Include="DataLevel\RciveData\TickerLine.cs" />
     <Compile Include="DataLevel\RciveData\Trade.cs" />
+    <Compile Include="DataLevel\ServiceData\Credentials.cs" />
     <Compile Include="DataLevel\ServiceData\UrlParam.cs" />
     <Compile Include="DataLevel\ServiceData\UrlSegment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
